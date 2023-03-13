@@ -1,38 +1,155 @@
+/* Define color palette */
+:root {
+  --color-primary: #ef233c;
+  --color-secondary: #d90429;
+  --color-accent: #8d99ae;
+  --color-background: #edf2f4;
+  --color-text: #2b2d42;
+}
+
+/* Apply global styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+/* Apply styles to App section */
 .App {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Apply styles to logo section */
+.logo {
   text-align: center;
+  margin-bottom: 40px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: var(--color-primary);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo .app-desc {
+  font-size: 18px;
+  margin-bottom: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Apply styles to main-body section */
+.main-body {
   display: flex;
   flex-direction: column;
+  gap: 20px;
+}
+
+/* Apply styles to search-lyrics section */
+.search-lyrics {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.search-lyrics input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.search-container {
+  display: flex;
+  gap: 10px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.search-btn {
+  background-color: var(--color-primary);
   color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.lyrics {
+  margin-top: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Button styles */
+.copy-lyrics,
+.share-lyrics {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  margin-right: 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.copy-lyrics:hover,
+.share-lyrics:hover {
+  background-color: var(--color-secondary);
+}
+
+/* Display lyrics styles */
+.display-lyrics {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+/* Send lyrics styles */
+.send-lyrics {
+  margin-top: 1.5rem;
+}
+
+.share-lyrics {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+}
+
+.share-lyrics:hover {
+  background-color: var(--color-secondary);
+}
+
+label {
+  display: inline-block;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  color: var(--color-text);
+}
+
+input {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 1px solid var(--color-accent);
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+/* Note styles */
+p {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--color-accent);
 }
